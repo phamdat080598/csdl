@@ -1,0 +1,31 @@
+<?php
+	require "connection.php";
+
+	$id = $_POST["id"];
+	class User{
+		function User($id,$name,$id_specialized,$id_user){
+			$this->id=$id;
+			$this->name=$name;
+			$this->id_specialized =$id_specialized;
+			$this->id_user=$id_user;
+		}
+	}
+	$mang =array();
+	$query="select * from lop where id_specialized='".$id."'";
+	$result = mysqli_query($connect,$query);
+	if($result){
+		while($row = mysqli_fetch_assoc($result)){
+			array_push($mang, new User($row['id_class'],$row['name'],$row['id_specialized'],$row['id_user']));
+		}
+		if(count($mang)>0){
+			echo json_encode($mang);
+		}else{
+			echo "null";
+		}
+	
+	}else{
+		echo "erro";
+	}
+	
+
+?>
