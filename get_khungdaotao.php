@@ -30,6 +30,5 @@
 		echo "error";
 	}
 	echo json_encode($data);
-	
 
 ?>
