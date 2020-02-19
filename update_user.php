@@ -61,7 +61,11 @@
 	// // $image = "1212";
 	// $mang = array();
 
+	if($id_class!=null){
 	$query = "UPDATE `taikhoan` SET `id_user`='".$id."',`password`='".$password."',`name`='".$name."',`id_department`='".$id_depart."',`id_class`='".$id_class."',`sex`='".$sex."',`phone`='".$phone."',`possion`='".$position."',`nationality`='".$nationality."',`wards`='".$wards."',`district`='".$district."',`city`='".$city."',`image`='".$image."',`id_card`='".$id_card."',`date_card`='".$date_card."',`address_card`='".$address_card."',`status`='".$status."' WHERE `id_user` = '".$id."'";
+	}else{
+		$query = "UPDATE `taikhoan` SET `id_user`='".$id."',`password`='".$password."',`name`='".$name."',`id_department`='".$id_depart."',`id_class`=null,`sex`='".$sex."',`phone`='".$phone."',`possion`='".$position."',`nationality`='".$nationality."',`wards`='".$wards."',`district`='".$district."',`city`='".$city."',`image`='".$image."',`id_card`='".$id_card."',`date_card`='".$date_card."',`address_card`='".$address_card."',`status`='".$status."' WHERE `id_user` = '".$id."'";
+	}
 
 	$result = mysqli_query($connect,$query);
 	if($result){

@@ -57,14 +57,20 @@
 	// // $sex = "1212";
 	// // $image = "1212";
 	// $mang = array();
-	$query = "INSERT into taikhoan values ('".$id."','".$password."','".$name."','".$id_depart."','".$id_class."','".$sex."','".$phone."','".$position."','".$nationality."','".$wards."','".$district."','".$city."','".$image."','".$id_card."','".$date_card."','".$address_card."','".$status."')";
+	header('Content-type: application/json');
+
+	if($id_class==null){
+		$query = "INSERT into taikhoan values ('".$id."','".$password."','".$name."','".$id_depart."',null,'".$sex."','".$phone."','".$position."','".$nationality."','".$wards."','".$district."','".$city."','".$image."','".$id_card."','".$date_card."','".$address_card."','".$status."')";
+	}else{
+		$query = "INSERT into taikhoan values ('".$id."','".$password."','".$name."','".$id_depart."','".$id_class."','".$sex."','".$phone."','".$position."','".$nationality."','".$wards."','".$district."','".$city."','".$image."','".$id_card."','".$date_card."','".$address_card."','".$status."')";
+	}
 		$result = mysqli_query($connect,$query);
 	if($result){
-		$data = [ 'status' => 'Đăng ký thành công', 'user' => $id ];
-		header('Content-type: application/json');
-		echo json_encode( $data );
+		$data = [ 'status' => '1', 'user' => $id ];
 	}else{
-		echo $query.$connect->error;
+		$data = [ 'status' => '0', 'user' => ""];
 	}
+
+	echo json_encode( $data );
 
 ?>

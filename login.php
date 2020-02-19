@@ -45,8 +45,11 @@
             $sql2 = "SELECT name FROM lop where id_class = '".$row['id_class']."'";
             $result2 = mysqli_query($connect, $sql2);
             $row2 = mysqli_fetch_assoc($result2);
-
-           $user1 = new User($row['id_user'],$row['password'],$row['name'],$row['id_department'],$row1['name'],$row['id_class'],$row2['name'],$row['sex'],$row['phone'],$row['possion'],$row['nationality'],$row['wards'],$row['district'],$row['city'],$row['image'],$row['id_card'],$row['date_card'],$row['address_card'],$row['status']);
+            if($row2==null){
+                $user1 = new User($row['id_user'],$row['password'],$row['name'],$row['id_department'],$row1['name'],$row['id_class'],null,$row['sex'],$row['phone'],$row['possion'],$row['nationality'],$row['wards'],$row['district'],$row['city'],$row['image'],$row['id_card'],$row['date_card'],$row['address_card'],$row['status']);
+            }else{
+                $user1 = new User($row['id_user'],$row['password'],$row['name'],$row['id_department'],$row1['name'],$row['id_class'],$row2['name'],$row['sex'],$row['phone'],$row['possion'],$row['nationality'],$row['wards'],$row['district'],$row['city'],$row['image'],$row['id_card'],$row['date_card'],$row['address_card'],$row['status']);
+            }
            array_push($mang, $user1);
         }
         if(count($mang)>0){

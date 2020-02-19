@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $password = "";
-$database = "qlsv";
+$database = "qlsvver2";
 
 // Lệnh kết nối CSDL
 $connect = mysqli_connect($host, $user, $password, $database);
