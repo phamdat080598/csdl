@@ -3,7 +3,8 @@
 
 	header('Content-type: application/json');
 
-	$id_subject = $_POST['id'];
+	$id_module= $_POST['id_module'];
+	$id_user = $_POST['id_user'];
 
 	$query = "SELECT * FROM `hocphan` WHERE id_subject = '".$id_subject."'";
 	$result = mysqli_query($connect,$query);

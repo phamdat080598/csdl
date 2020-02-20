@@ -17,14 +17,15 @@
 			array_push($mang, new User($row['id_lesson'],$row['name'],$row['time_start'],$row['time_end']));
 		}
 		if(count($mang)>0){
-			echo json_encode($mang);
+			$data = [ 'status' => '1', 'lesson' => $mang ];
 		}else{
-			echo "error";
+			$data = [ 'status' => '2', 'lesson' => $mang ];
 		}
 	
 	}else{
-		echo "null";
+		$data = [ 'status' => '2', 'lesson' => $mang ];
 	}
+	echo json_encode($data);
 	
 
 ?>
