@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th2 20, 2020 lúc 11:45 AM
+-- Thời gian đã tạo: Th2 21, 2020 lúc 11:47 AM
 -- Phiên bản máy phục vụ: 10.4.11-MariaDB
 -- Phiên bản PHP: 7.4.2
 
@@ -73,7 +73,10 @@ CREATE TABLE `hocphan` (
 INSERT INTO `hocphan` (`id_module`, `id_subject`, `id_user`, `date_register`, `date_start`, `date_end`, `quantity`, `quantity_registed`, `status`) VALUES
 (4, 1, NULL, '2020-02-18 21:53:05', '2020-02-18', '2020-02-18', 70, 0, 0),
 (5, 2, NULL, '2020-02-18 21:53:05', '2020-02-18', '2020-02-18', 70, 0, 0),
-(11, 1, NULL, '2020/02/20', '1/1/2020', '2/2/2020', 75, 0, 0);
+(11, 1, NULL, '2020/02/20', '1/1/2020', '2/2/2020', 75, 0, 0),
+(12, 1, NULL, '2020/02/21', '1/1/2020', '2/2/2020', 75, 0, 0),
+(13, 2, NULL, '2020/02/21', '2020-1-21', '2020-1-22', 75, 0, 0),
+(14, 2, NULL, '2020/02/21', '2020-2-21', '2020-2-29', 75, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -246,6 +249,7 @@ CREATE TABLE `taikhoan` (
 
 INSERT INTO `taikhoan` (`id_user`, `password`, `name`, `id_department`, `id_class`, `sex`, `phone`, `possion`, `nationality`, `wards`, `district`, `city`, `image`, `id_card`, `date_card`, `address_card`, `status`) VALUES
 ('1', '1', '1', 0, 1, '1', '123', '0', '', '', '22222222', '', '', '123', '', '', 0),
+('11', '11', '11', 0, NULL, '1', '', '1', 'Việt Nam', 'Phường Tân Định', 'Quận 1', 'Hồ Chí Minh', '15822717466211582271848263.jpg', '', '', '', 0),
 ('1141460160', '123456', 'Phạm Văn A', 0, NULL, '1', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
 ('1141460161', '123456', 'Phạm Văn B', 0, 2, '1', '1234', '2', 'Việt Nam', 'Thượng Cát', 'Bắc Từ Liêm', 'Hà Nội', 'IMG_20200219_1356321582107959586.jpg', '123', '', '', 0),
 ('1141460162', '123456', 'Phạm Văn C', 0, NULL, '1', '', '1', 'Việt Nam', 'Phường Tân Định', 'Quận 1', 'Hồ Chí Minh', '15820983546931582098378792.jpg', '1', '', '', 0);
@@ -271,6 +275,9 @@ CREATE TABLE `thoikhoabieu` (
 INSERT INTO `thoikhoabieu` (`id_lesson`, `id_room`, `id_weekday`, `id_module`, `status`) VALUES
 (1, 1, 1, 4, 0),
 (1, 1, 2, 7, 0),
+(1, 1, 3, 14, 0),
+(1, 1, 5, 14, 0),
+(1, 1, 6, 14, 0),
 (2, 1, 1, 11, 0);
 
 -- --------------------------------------------------------
@@ -422,7 +429,7 @@ ALTER TABLE `tiethoc`
 -- AUTO_INCREMENT cho bảng `hocphan`
 --
 ALTER TABLE `hocphan`
-  MODIFY `id_module` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_module` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT cho bảng `lop`
