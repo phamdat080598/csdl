@@ -1,0 +1,1008 @@
+{
+	"info": {
+		"_postman_id": "a5a12748-a0de-4e45-b143-36936be01d41",
+		"name": "qlsv",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "taikhoan",
+			"item": [
+				{
+					"name": "resgiter_user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "connection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "http://192.168.99.221/qlsv/get_nghanhbyid.php",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "K1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "pham van c",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id_dep",
+							"value": "K1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id_class",
+							"value": "L2_CNTT2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "possion",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.99.221/qlsv/get_nghanhbyid.php?",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"99",
+						"221"
+					],
+					"path": [
+						"qlsv",
+						"get_nghanhbyid.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1W3",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Phạm Văn A",
+							"disabled": true
+						},
+						{
+							"key": "id_dep",
+							"value": "K1",
+							"disabled": true
+						},
+						{
+							"key": "id_class",
+							"value": "L2_CNTT2",
+							"disabled": true
+						},
+						{
+							"key": "posstion",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register_user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "pham van c",
+							"type": "text"
+						},
+						{
+							"key": "id_dep",
+							"value": "K1",
+							"type": "text"
+						},
+						{
+							"key": "id_class",
+							"value": "L2_CNTT2",
+							"type": "text"
+						},
+						{
+							"key": "possion",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.99.221/qlsv/register_user.php?",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"99",
+						"221"
+					],
+					"path": [
+						"qlsv",
+						"register_user.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1W3",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Phạm Văn A",
+							"disabled": true
+						},
+						{
+							"key": "id_dep",
+							"value": "K1",
+							"disabled": true
+						},
+						{
+							"key": "id_class",
+							"value": "L2_CNTT2",
+							"disabled": true
+						},
+						{
+							"key": "posstion",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_lopbyid.php",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "N1_CNTT",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "pham van c",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id_dep",
+							"value": "K1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id_class",
+							"value": "L2_CNTT2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "possion",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.99.221/qlsv/get_lopbyid.php?",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"99",
+						"221"
+					],
+					"path": [
+						"qlsv",
+						"get_lopbyid.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1W3",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Phạm Văn A",
+							"disabled": true
+						},
+						{
+							"key": "id_dep",
+							"value": "K1",
+							"disabled": true
+						},
+						{
+							"key": "id_class",
+							"value": "L2_CNTT2",
+							"disabled": true
+						},
+						{
+							"key": "posstion",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_mon.php",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "N1_CNTT",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "pham van c",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id_dep",
+							"value": "K1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id_class",
+							"value": "L2_CNTT2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "possion",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.99.221/qlsv/get_mon.php?",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"99",
+						"221"
+					],
+					"path": [
+						"qlsv",
+						"get_mon.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1W3",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Phạm Văn A",
+							"disabled": true
+						},
+						{
+							"key": "id_dep",
+							"value": "K1",
+							"disabled": true
+						},
+						{
+							"key": "id_class",
+							"value": "L2_CNTT2",
+							"disabled": true
+						},
+						{
+							"key": "posstion",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_khungdaotao.php",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "k1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "pham van c",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id_dep",
+							"value": "K1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id_class",
+							"value": "L2_CNTT2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "possion",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.99.221/qlsv/get_khungdaotao.php?",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"99",
+						"221"
+					],
+					"path": [
+						"qlsv",
+						"get_khungdaotao.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1W3",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Phạm Văn A",
+							"disabled": true
+						},
+						{
+							"key": "id_dep",
+							"value": "K1",
+							"disabled": true
+						},
+						{
+							"key": "id_class",
+							"value": "L2_CNTT2",
+							"disabled": true
+						},
+						{
+							"key": "posstion",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_tearch",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.0.123/qlsv/get_tearch.php",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"123"
+					],
+					"path": [
+						"qlsv",
+						"get_tearch.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://192.168.99.221/qlsv/get_,lop.php",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "N1_CNTT",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "pham van c",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id_dep",
+							"value": "K1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id_class",
+							"value": "L2_CNTT2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "possion",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.99.221/qlsv/get_,lop.php?",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"99",
+						"221"
+					],
+					"path": [
+						"qlsv",
+						"get_,lop.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1W3",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Phạm Văn A",
+							"disabled": true
+						},
+						{
+							"key": "id_dep",
+							"value": "K1",
+							"disabled": true
+						},
+						{
+							"key": "id_class",
+							"value": "L2_CNTT2",
+							"disabled": true
+						},
+						{
+							"key": "posstion",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://192.168.99.221/qlsv/get_nghanh.php",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "N1_CNTT",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "pham van c",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id_dep",
+							"value": "K1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id_class",
+							"value": "L2_CNTT2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "possion",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.99.221/qlsv/get_nghanh.php?",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"99",
+						"221"
+					],
+					"path": [
+						"qlsv",
+						"get_nghanh.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1W3",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Phạm Văn A",
+							"disabled": true
+						},
+						{
+							"key": "id_dep",
+							"value": "K1",
+							"disabled": true
+						},
+						{
+							"key": "id_class",
+							"value": "L2_CNTT2",
+							"disabled": true
+						},
+						{
+							"key": "posstion",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLopByIdLop",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_usser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search_user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "changePass",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_subject",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_module",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_schedule",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_room",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_lesson",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_day",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check_schedule",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_module_by_status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
