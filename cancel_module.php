@@ -10,17 +10,32 @@
 		$query = "UPDATE `hocphan` SET `id_user`= null WHERE id_module = '".$id_module."'";
 		$result = mysqli_query($connect,$query);
 		if ($result) {
-			$data = [ 'status' => '1', 'message' => "Hủy học phần thành công!!!"];
+			$data = [ 'status' => '1', 'message' => "Hủy giảng dạy thành công!!!"];
 		}else{
-			$data = [ 'status' => '2', 'message' => 'Hủy học phần không thành công!!!' ];
+			$data = [ 'status' => '2', 'message' => 'Hủy giảng dạy không thành công!!!'];
 		}
 	}else{
 		$query = "DELETE FROM `chitiethocphan` WHERE id_user = '".$id_user."' and id_module = '".$id_module."'";
 		$result =  mysqli_query($connect,$query);
 		if ($result) {
-			$data = [ 'status' => '1', 'message' => "Hủy giảng dạy thành công!!!"];
+			$query1 ="SELECT quantity_registed,quantity FROM `hocphan` WHERE id_module = '".$id_module."'";
+			$result1 =  mysqli_query($connect,$query1);
+			$row1 = mysqli_fetch_assoc($result1);
+			$count = $row1['quantity_registed'] - 1;
+			if($count>-1){
+				$query = "UPDATE `hocphan` SET quantity_registed = '".$count."' WHERE id_module = '".$id_module."'";
+				$result1 =  mysqli_query($connect,$query);
+				if($result1){
+					$data = [ 'status' => '1', 'message' => "Hủy  học phần thành công!!!"];
+				}else{
+					$data = [ 'status' => '2', 'message' => "Hủy học phần không thành công!!!"];
+				}
+			}else{
+				$data = [ 'status' => '2', 'message' => "Hủy học phần không thành công!!!"];
+			}
+			
 		}else{
-			$data = [ 'status' => '2', 'message' => 'Hủy giảng dạy không thành công!!!'];
+			$data = [ 'status' => '2', 'message' => "Hủy học phần không thành công!!!"];
 		}
 	}
 	echo json_encode($data);
