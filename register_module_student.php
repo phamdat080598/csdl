@@ -16,13 +16,12 @@
 			$row1 = mysqli_fetch_assoc($result1);
 			$count = $row1['quantity_registed'] + 1;
 			$quantity = $row1['quantity'];
-			echo $count;
 			if($count>$quantity){
 				$data = [ 'status' => '3', 'message' => 'Học phần này đã đầy số lượng' ];
 			}
 			else{
 				$query = "UPDATE `hocphan` SET quantity_registed = '".$count."' WHERE id_module = '".$id_module."'";
-				$result1 =  mysqli_query($connect,$query1);
+				$result1 =  mysqli_query($connect,$query);
 				if($result1){
 					$data = [ 'status' => '1', 'message' => "Đăng ký học phần thành công!!!"];
 				}else{
