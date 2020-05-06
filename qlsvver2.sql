@@ -85,7 +85,7 @@ INSERT INTO `hocphan` (`id_module`, `id_subject`, `id_user`, `date_register`, `d
 --
 
 CREATE TABLE `khoa` (
-  `id_department` int(32) NOT NULL,
+  `id_department` int(32) NOT NULL ,
   `name` varchar(256) NOT NULL,
   `id_user` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf32;
@@ -95,7 +95,7 @@ CREATE TABLE `khoa` (
 --
 
 INSERT INTO `khoa` (`id_department`, `name`, `id_user`) VALUES
-(0, 'Công nghệ thông tin', '1141460162');
+(1, 'Công nghệ thông tin', '1141460162');
 
 -- --------------------------------------------------------
 
@@ -113,8 +113,8 @@ CREATE TABLE `khungdaotao` (
 --
 
 INSERT INTO `khungdaotao` (`id_department`, `id_subject`) VALUES
-(0, 1),
-(0, 2);
+(1, 1),
+(1, 2);
 
 -- --------------------------------------------------------
 
@@ -195,8 +195,8 @@ CREATE TABLE `nghanh` (
 --
 
 INSERT INTO `nghanh` (`id_specialized`, `name`, `id_department`) VALUES
-(1, 'Công nghệ thôn tin', 0),
-(2, 'Hệ thống thông tin', 0);
+(1, 'Công nghệ thôn tin', 1),
+(2, 'Hệ thống thông tin', 1);
 
 -- --------------------------------------------------------
 
@@ -248,11 +248,11 @@ CREATE TABLE `taikhoan` (
 --
 
 INSERT INTO `taikhoan` (`id_user`, `password`, `name`, `id_department`, `id_class`, `sex`, `phone`, `possion`, `nationality`, `wards`, `district`, `city`, `image`, `id_card`, `date_card`, `address_card`, `status`) VALUES
-('1', '1', '1', 0, 1, '1', '123', '0', '', '', '22222222', '', '', '123', '', '', 0),
-('11', '11', '11', 0, NULL, '1', '', '1', 'Việt Nam', 'Phường Tân Định', 'Quận 1', 'Hồ Chí Minh', '15822717466211582271848263.jpg', '', '', '', 0),
-('1141460160', '123456', 'Phạm Văn A', 0, NULL, '1', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
-('1141460161', '123456', 'Phạm Văn B', 0, 2, '1', '1234', '2', 'Việt Nam', 'Thượng Cát', 'Bắc Từ Liêm', 'Hà Nội', 'IMG_20200219_1356321582107959586.jpg', '123', '', '', 0),
-('1141460162', '123456', 'Phạm Văn C', 0, NULL, '1', '', '1', 'Việt Nam', 'Phường Tân Định', 'Quận 1', 'Hồ Chí Minh', '15820983546931582098378792.jpg', '1', '', '', 0);
+('1', '1', '1', 1, 1, '1', '123', '0', '', '', '22222222', '', '', '123', '', '', 0),
+('11', '11', '11', 1, NULL, '1', '', '1', 'Việt Nam', 'Phường Tân Định', 'Quận 1', 'Hồ Chí Minh', '15822717466211582271848263.jpg', '', '', '', 0),
+('1141460160', '123456', 'Phạm Văn A', 1, NULL, '1', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
+('1141460161', '123456', 'Phạm Văn B', 1, 2, '1', '1234', '2', 'Việt Nam', 'Thượng Cát', 'Bắc Từ Liêm', 'Hà Nội', 'IMG_20200219_1356321582107959586.jpg', '123', '', '', 0),
+('1141460162', '123456', 'Phạm Văn C', 1, NULL, '1', '', '1', 'Việt Nam', 'Phường Tân Định', 'Quận 1', 'Hồ Chí Minh', '15820983546931582098378792.jpg', '1', '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -274,7 +274,6 @@ CREATE TABLE `thoikhoabieu` (
 
 INSERT INTO `thoikhoabieu` (`id_lesson`, `id_room`, `id_weekday`, `id_module`, `status`) VALUES
 (1, 1, 1, 4, 0),
-(1, 1, 2, 7, 0),
 (1, 1, 3, 14, 0),
 (1, 1, 5, 14, 0),
 (1, 1, 6, 14, 0),
@@ -437,6 +436,9 @@ ALTER TABLE `hocphan`
 ALTER TABLE `lop`
   MODIFY `id_class` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
+  ALTER TABLE `khoa`
+  MODIFY `id_department` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
+
 --
 -- AUTO_INCREMENT cho bảng `monhoc`
 --
@@ -501,7 +503,7 @@ ALTER TABLE `khoa`
 -- Các ràng buộc cho bảng `khungdaotao`
 --
 ALTER TABLE `khungdaotao`
-  ADD CONSTRAINT `FK1` FOREIGN KEY (`id_department`) REFERENCES `khoa` (`id_department`) ON DELETE CASCADE ON UPDATE CASCADE,
+  
   ADD CONSTRAINT `FK2K` FOREIGN KEY (`id_subject`) REFERENCES `monhoc` (`id_subject`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
