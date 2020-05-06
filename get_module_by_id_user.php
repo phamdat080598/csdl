@@ -31,7 +31,7 @@
 		$result = mysqli_query($connect,$query);
 		if($result){
 			while($row = mysqli_fetch_assoc($result)){
-				array_push($mang, new Module($row['id_module'],$row['id_subject'],$row1['name'],$row['id_user'],$row['date_register'],$row['date_start'],$row['date_end'],$row['quantity'],$row['quantity_registed'],$row['status']));
+				array_push($mang, new Module($row['id_module'],$row['id_subject'],$row['name'],$row['id_user'],$row['date_register'],$row['date_start'],$row['date_end'],$row['quantity'],$row['quantity_registed'],$row['status']));
 			}
 			if(count($mang)>0){
 				$data = [ 'status' => '1', 'modules' => $mang ]; 
