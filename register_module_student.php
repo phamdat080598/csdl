@@ -49,7 +49,7 @@
 			$queryC = "select * from hocphan WHERE id_user= '".$id_user."' and id_module = '".$id_module."'";
 			$resultC =  mysqli_query($connect,$queryC);
 			if(mysqli_num_rows($resultC)==0){
-				$query = "select * from hocphan WHERE id_user= 'null' and id_module = '".$id_module."'";
+				$query = "select * from hocphan WHERE id_user is NULL and id_module = '".$id_module."'";
 				$result =  mysqli_query($connect,$query);
 				if(mysqli_num_rows($result)!=0){
 					$query = "select * from hocphan inner join thoikhoabieu on hocphan.id_module=thoikhoabieu.id_module WHERE  id_user='".$id_user."' and id_lesson = '".$rowM['id_lesson']."' and id_weekday = '".$rowM['id_weekday']."' and id_room = '".$rowM['id_room']."'";
@@ -60,10 +60,10 @@
 						if ($result1) {
 							$data = [ 'status' => '1', 'message' => "Đăng ký giảng dạy thành công!!!"];
 						}else{
-							$data = [ 'status' => '0', 'message' => 'Đăng ký giảng dạy không thành công!!!' ];
+							$data = [ 'status' => '1', 'message' => 'Đăng ký giảng dạy không thành công!!!' ];
 						}
 					}else{
-						$data = [ 'status' => '0', 'message' => 'Trùng lịch giảng dạy!!!' ];
+						$data = [ 'status' => '1', 'message' => 'Trùng lịch giảng dạy!!!' ];
 					}
 				}else{
 					$data = [ 'status' => '0', 'message' => 'Học phần giảng dạy này đã được đã đăng ký!!!' ];
