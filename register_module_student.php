@@ -11,6 +11,7 @@
 	$queryM = "SELECT * FROM `thoikhoabieu` WHERE id_module='".$id_module."'";
 	$resultM =  mysqli_query($connect,$queryM);
 	if($rowM = mysqli_fetch_assoc($resultM)){
+
 		if($position=='2'){
 			$queryC = "select * from chitiethocphan WHERE id_user= '".$id_user."' and id_module = '".$id_module."'";
 			$resultC =  mysqli_query($connect,$queryC);
@@ -25,8 +26,8 @@
 					$quantity = $row1['quantity'];
 					if($count>$quantity){
 						$data = [ 'status' => '3', 'message' => 'Học phần này đã đầy số lượng' ];
-					}
-					else{
+
+					}else{
 						$query2 = "INSERT INTO `chitiethocphan`(`id_user`, `id_module`, `date_register`) VALUES ('".$id_user."','".$id_module."','".$today."')";
 						$result2 = mysqli_query($connect,$query2);
 						$query3 = "UPDATE `hocphan` SET quantity_registed = '".$count."' WHERE id_module = '".$id_module."'";
